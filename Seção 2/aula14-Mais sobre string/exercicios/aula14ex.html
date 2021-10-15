@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 14</title>
+</head>
+
+<body>
+
+    <script>
+        const nome = prompt('Digite seu nome completo:')
+        document.body.innerHTML += `O seu nome é: <strong> ${nome} </strong> <br/>`;
+
+        //qtdLetras --> usa o length;
+        document.body.innerHTML += `Seu nome tem <strong>${nome.length}</strong> letras <br/>`;
+        
+        //seleciona pelo indice --> usa charAt
+        document.body.innerHTML += `A segunda letra do seu nome é: <strong>${nome.charAt(1)}</strong><br/>`; //poderia ter usado ${nome[1]} que obteria o mesmo resultado
+
+        //seleciona pela posiçao da letra -> usa o indexOf
+        document.body.innerHTML += `Qual o primeiro índice da letra LETRA 'A' no seu nome? <strong> ${nome.indexOf('a')}</strong><br/>`;
+
+        //seleciona do ultimo pro primeiro - usa o lastIndexOf
+        document.body.innerHTML += `Qual o último índice da letra LETRA 'A' no seu nome? <strong>${(nome.lastIndexOf('a'))} </strong><br/>`;
+
+        //subtrai o valor total da string - usa o slice
+        document.body.innerHTML += `As últimas 3 letras do seu nome são:<strong> ${nome.slice(-3, nome.length)}</strong><br/>`;
+
+        // divide as palavras comendo os espaços em branco - usa o split
+        document.body.innerHTML += `As palavras do seu nome são: <strong>${nome.split(' ')}</strong> <br/>`;
+
+        // Deixa todas as letras maiusculas -> usa o toUpperCase
+        console.log(nome.toUpperCase());
+        document.body.innerHTML += `Seu nome com letras maiúsculas:<strong> ${nome.toUpperCase()} </strong><br/>`;
+
+        // Deixa todas as letras minusculas -> usa o toLowerCase
+        console.log(nome.toLowerCase());
+        document.body.innerHTML += `Seu nome com letras minúsculas:<strong> ${nome.toLowerCase()}</strong><br/>`;
+    </script>
+</body>
+
+</html>
